@@ -20,7 +20,7 @@ onMounted(() => {
   <div class="q-px-md q-py-xl">
     <div class="row justify-center">
       <div class="col-4 border">
-        <h4>Releases</h4>
+        <p class="text-weight-bold">Releases</p>
         <q-card class="my-card" v-for="release in releases" :key="release.id">
           <q-card-section>
             {{ release }}
