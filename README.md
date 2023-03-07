@@ -1,14 +1,13 @@
 # music-playlist
 
-This template should help get you started developing with Vue 3 in Vite.
+Requesting a set of songs from an artist, using the Discogs api. Users are able to view and like the song. Songs that a liked, will be added to a favorite list. This app is available to preview at [Vercel](https://music-playlist-eight.vercel.app/)
 
-## Recommended IDE Setup
+## What I used
+- `Vue 3`
+- `Quasar`
+- `Axios`
+- `Pinia`
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
 
 ## Project Setup
 
