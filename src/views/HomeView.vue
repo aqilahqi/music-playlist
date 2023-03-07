@@ -65,8 +65,8 @@ onMounted(() => {
         />
       </q-page-sticky>
 
-      <q-dialog v-model="dialog" position="right">
-        <q-card class="bg-dark" style="width: 350px">
+      <q-dialog v-model="dialog" position="bottom">
+        <q-card class="bg-accent custom-dialog" style="width: 350px">
           <q-card-section><Favourites /></q-card-section>
         </q-card>
       </q-dialog>
