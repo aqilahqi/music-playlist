@@ -8,7 +8,7 @@ import router from './router'
 import '@quasar/extras/material-icons/material-icons.css'
 import 'quasar/src/css/index.sass'
 
-import './assets/global.css'
+import './scss/main.scss'
 
 const app = createApp(App)
 
