@@ -55,11 +55,18 @@ onMounted(() => {
         </q-card>
       </div>
       <q-page-sticky position="bottom-right" :offset="[18, 18]" v-if="favourites.length > 0">
-        <q-btn label="Right" icon="keyboard_arrow_right" color="primary" @click="open('right')" />
+        <q-btn
+          round
+          icon="favorite"
+          text-color="accent"
+          size="lg"
+          style="background: rgba(255, 255, 255, 0.1)"
+          @click="open('right')"
+        />
       </q-page-sticky>
 
       <q-dialog v-model="dialog" position="right">
-        <q-card class="bg-secondary" style="width: 350px">
+        <q-card class="bg-dark" style="width: 350px">
           <q-card-section><Favourites /></q-card-section>
         </q-card>
       </q-dialog>
