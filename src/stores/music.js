@@ -53,19 +53,14 @@ export const useMusicStore = defineStore('music', () => {
     })
   }
   function toggleFavourites(obj) {
-    if (releases.value.length > 0) {
-      releases.value.map((release) => {
-        if (release.id === obj.id) {
-          release.favourite = !release.favourite
-        }
-      })
-    }
-    if (favourites.value.length > 0) {
-      favourites.value.map((f) => {
-        if (obj.id === f.id) {
-          obj.favourite = !obj.favourite
-        }
-      })
+    const findInFavourites = favourites.value.find((favourite) => favourite.id == obj.id)
+    const findInReleases = releases.value.findIndex((release) => release.id == obj.id)
+
+    releases.value[findInReleases].favourite = !releases.value[findInReleases].favourite
+    if (!findInFavourites) {
+      favourites.value.push(obj)
+    } else {
+      favourites.value = favourites.value.filter((favourite) => favourite.id !== obj.id)
     }
   }
 
