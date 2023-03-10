@@ -1,6 +1,6 @@
 # music-playlist
 
-Requesting a set of songs from an artist, using the Discogs api. Users are able to view and like the song. Songs that a liked, will be added to a favorite list. This app is available to preview at [Vercel](https://music-playlist-eight.vercel.app/)
+Requesting a set of songs from an artist, using the Discogs api. Users are able to view and like the song. Songs that are liked, will be added to a favorite list. This app is available to preview at [Vercel](https://music-playlist-eight.vercel.app/)
 
 ## What I used
 - `Vue 3`
