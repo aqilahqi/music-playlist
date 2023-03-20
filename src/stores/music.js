@@ -8,7 +8,7 @@ export const useMusicStore = defineStore('music', () => {
   const favourites = ref([])
   const loading = ref(false)
 
-  function getArtist() {
+  async function getArtist() {
     return new Promise((resolve, reject) => {
       api
         .get('/artists/21262')
@@ -22,7 +22,7 @@ export const useMusicStore = defineStore('music', () => {
     })
   }
 
-  function displayReleases() {
+  async function displayReleases() {
     return new Promise((resolve, reject) => {
       loading.value = true
       api
@@ -30,17 +30,12 @@ export const useMusicStore = defineStore('music', () => {
         .then((response) => {
           releases.value = []
           response.data.releases.map((a) => {
-            if (favourites.value.length > 0) {
+              a = Object.assign(a, { favourite: false })
               favourites.value.map((f) => {
                 if (a.id === f.id) {
                   a = Object.assign(a, { favourite: true })
-                } else {
-                  a = Object.assign(a, { favourite: false })
                 }
               })
-            } else {
-              a = Object.assign(a, { favourite: false })
-            }
             releases.value.push(a)
           })
           resolve('releases retrieved')

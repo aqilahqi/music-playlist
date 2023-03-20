@@ -39,6 +39,6 @@ const favourites = computed(() => {
         </q-card-section>
       </q-card>
     </div>
-    <p v-else>You do not have any favourites...</p>
+    <p v-else class="q-mb-none">You do not have any favourites...</p>
   </div>
 </template>
